@@ -1,6 +1,6 @@
 # Hi, I'm Zetron
 
-I'm a cybersecurity professional with over 7 years of experience in threat detection, incident response, cloud security, and security operations. I specialize in building and tuning detections, leading incident investigations, and designing secure environments across Azure and AWS.
+I'm a cybersecurity professional with over 8 years of experience in threat detection, incident response, cloud security, and security operations. I specialize in building and tuning detections, leading incident investigations, and designing secure environments across Azure and AWS.
 
 ---
 
