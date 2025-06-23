@@ -13,6 +13,5 @@
 SecurityEvent
 | where EventID == 10 or EventID == 4688
 | where ProcessName has "mimikatz" or ProcessName has "procdump" or ProcessCommandLine has "lsass"
-| project TimeGenerated, Computer, Account, ProcessName, CommandLine
-
-
+| project TimeGenerated, Computer, Account, ProcessName, CommandLines
+```
