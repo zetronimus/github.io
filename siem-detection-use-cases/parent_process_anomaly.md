@@ -12,7 +12,7 @@
 
 ### Detection Logic 
 
-#Sigma
+# Sigma
 
 ```
 detection:
@@ -26,7 +26,7 @@ detection:
   condition: selection
 ```
 
-#MKQL
+# KQL
 
 ```
 DeviceProcessEvents
@@ -34,7 +34,7 @@ DeviceProcessEvents
 | where FileName in~ ("cmd.exe", "powershell.exe")
 ```
 
-#Splunk
+# Splunk
 
 ```
 index=main sourcetype=windows_process
@@ -42,7 +42,7 @@ ParentImage IN ("*\\winword.exe", "*\\excel.exe")
 Image IN ("*\\cmd.exe", "*\\powershell.exe")
 ```
 
-#MITRE ATT&CK
+# MITRE ATT&CK
 
 T1059.001 – PowerShell
 T1027 – Obfuscated Files or Information
