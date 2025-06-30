@@ -4,15 +4,15 @@
 
 ---
 
-# Use Case
+## Use Case
 - Detect attempts to bypass AV and EDR visibility
 - Works well on command line telemetry or process logs
 
 ---
-# Detection Logic
+## Detection Logic
 ---
 
-# Sigma
+### Sigma
 
 ```markdown
 detection:
@@ -24,7 +24,7 @@ detection:
   condition: selection
 ```
 
-## KQL
+### KQL
 
 ```
 DeviceProcessEvents
@@ -32,7 +32,7 @@ DeviceProcessEvents
 | where ProcessCommandLine has_any ("-enc", "-encodedcommand")
 ```
 
-## SPL
+### SPL
 
 ```
 index=main sourcetype=windows_process
@@ -40,7 +40,7 @@ Image=*powershell*
 CommandLine IN ("*-enc*", "*-encodedcommand*")
 ```
 
-## MITRE ATT&CK
+### MITRE ATT&CK
 
 T1059 – Command and Scripting Interpreter
 T1203 – Exploitation for Client Execution
