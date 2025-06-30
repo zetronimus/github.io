@@ -1,5 +1,4 @@
----
-### Suspicious Rundll32 Usage
+# Suspicious Rundll32 Usage
 ---
 
 **Description**: Detects rare or suspicious `rundll32.exe` command line arguments — commonly used for LOLBin attacks or fileless malware execution.
