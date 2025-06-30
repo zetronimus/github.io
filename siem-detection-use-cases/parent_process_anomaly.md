@@ -27,7 +27,7 @@ detection:
 
 ### KQL
 
-```
+```kql
 DeviceProcessEvents
 | where InitiatingProcessFileName in~ ("WINWORD.EXE", "EXCEL.EXE")
 | where FileName in~ ("cmd.exe", "powershell.exe")
@@ -35,7 +35,7 @@ DeviceProcessEvents
 
 ### Splunk
 
-```
+```spl
 index=main sourcetype=windows_process
 ParentImage IN ("*\\winword.exe", "*\\excel.exe") 
 Image IN ("*\\cmd.exe", "*\\powershell.exe")
