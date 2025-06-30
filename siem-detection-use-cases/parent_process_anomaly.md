@@ -12,8 +12,6 @@
 
 ## Detection Logic
 
----
-
 ### Sigma
 
 ```yaml
