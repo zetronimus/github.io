@@ -1,10 +1,4 @@
-
----
-
-## Encoded Powershell Detection
-
-```markdown
-# Encoded PowerShell Command Detection
+# Encoded Powershell Detection
 
 **Description**: Flags PowerShell commands using base64-encoded payloads, often used in obfuscated malware or red team simulations.
 
@@ -15,9 +9,12 @@
 - Works well on command line telemetry or process logs
 
 ---
+# Detection Logic
+---
 
-# Detection Logic (Sigma)
+# Sigma
 
+```markdown
 detection:
   selection:
     CommandLine|contains:
@@ -43,7 +40,7 @@ Image=*powershell*
 CommandLine IN ("*-enc*", "*-encodedcommand*")
 ```
 
-# MITRE ATT&CK
+## MITRE ATT&CK
 
 T1059 – Command and Scripting Interpreter
 T1203 – Exploitation for Client Execution
