@@ -23,6 +23,7 @@ detection:
   condition: selection
 ```
 
+---
 ### KQL
 
 ```kql
@@ -31,6 +32,7 @@ DeviceProcessEvents
 | where ProcessCommandLine has_any ("javascript", "ShellExec_RunDLL")
 ```
 
+---
 ### SPL
 
 ```spl
