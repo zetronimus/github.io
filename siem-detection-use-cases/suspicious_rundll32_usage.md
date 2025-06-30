@@ -8,13 +8,14 @@
 
 ---
 
-## 🎯 Use Case
+## Use Case
 - Flag abuse of trusted Windows binaries
 - Detect early-stage malware attempts using `rundll32`
 
 ---
 
-## 🛠️ Detection Logic (Sigma Style)
+## Detection Logic (Sigma Style)
+```
 
 ```yaml
 detection:
@@ -26,7 +27,7 @@ detection:
   condition: selection
 ```
 
-#KQL
+# KQL
 
 ```
 DeviceProcessEvents
@@ -34,7 +35,7 @@ DeviceProcessEvents
 | where ProcessCommandLine has_any ("javascript", "ShellExec_RunDLL")
 ```
 
-#SPL
+# SPL
 
 ```
 index=main sourcetype=windows_process
