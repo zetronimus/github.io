@@ -25,12 +25,10 @@ A home lab designed to emulate adversary behaviors and validate detection rules 
 - Privilege escalation and scheduled task persistence
 These attack scenarios are used to test SIEM rules and EDR detections mapped to MITRE ATT&CK.
 
-### [Incident Response Playbooks](./incident-response-playbooks/README.md)
-A collection of IR playbooks for ransomware, phishing, insider threat, and cloud account compromise scenarios. 
+### Incident Response Playbooks
+- [Ransomware Response](playbooks/ransomware_response.md)
+- [Phishing Response](playbooks/phishing_response.md)
 
-➡[View Sample Ransomware Playbook](./incident-response-playbooks/ransomware-playbook.md) – Documents containment, eradication, and recovery steps with mapped MITRE ATT&CK tactics and response time objectives.
-
-➡[View Sample Phishing Playbook](./incident-response-playbooks/phishing-playbook.md) – Covers email header analysis, credential reset workflows, and downstream account compromise detection.
 
 ### [SIEM Detection Use Cases](./siem-detection-use-cases/README.md)
 Microsoft Sentinel & Splunk KQL/SPL queries mapped to MITRE ATT&CK to detect common TTPs.
