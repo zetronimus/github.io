@@ -26,7 +26,7 @@ detection:
 
 ### KQL
 
-```
+```kql
 DeviceProcessEvents
 | where ProcessCommandLine has "powershell"
 | where ProcessCommandLine has_any ("-enc", "-encodedcommand")
@@ -34,7 +34,7 @@ DeviceProcessEvents
 
 ### SPL
 
-```
+```spl
 index=main sourcetype=windows_process
 Image=*powershell* 
 CommandLine IN ("*-enc*", "*-encodedcommand*")
