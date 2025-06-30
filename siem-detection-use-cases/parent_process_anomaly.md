@@ -10,7 +10,11 @@
 
 ---
 
-## Detection Logic (Sigma Style)
+## Detection Logic
+
+---
+
+### Sigma
 
 ```yaml
 detection:
