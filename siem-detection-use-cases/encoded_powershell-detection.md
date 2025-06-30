@@ -1,7 +1,7 @@
 
 ---
 
-### `encoded_powershell_detection.md`
+## Encoded Powershell Detection
 
 ```markdown
 # Encoded PowerShell Command Detection
@@ -27,7 +27,7 @@ detection:
   condition: selection
 ```
 
-# KQL
+## KQL
 
 ```
 DeviceProcessEvents
@@ -35,7 +35,7 @@ DeviceProcessEvents
 | where ProcessCommandLine has_any ("-enc", "-encodedcommand")
 ```
 
-# SPL
+## SPL
 
 ```
 index=main sourcetype=windows_process
