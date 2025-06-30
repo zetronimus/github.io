@@ -3,7 +3,6 @@
 
 ### Encoded PowerShell Command Detection
 
-```
 **Description**: Flags PowerShell commands using base64-encoded payloads, a common obfuscation tactic used by malware and red teams.
 
 ---
@@ -14,8 +13,11 @@
 
 ---
 
-### 🛠️ Detection Logic (Sigma Style)
-```yaml
+Detection Logic
+
+Sigma
+
+```
 detection:
   selection:
     CommandLine|contains:
@@ -23,7 +25,7 @@ detection:
       - '-enc'
       - '-encodedcommand'
   condition: selection
-```
+  ```
 
 #KQL
 
