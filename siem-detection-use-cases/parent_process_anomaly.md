@@ -14,7 +14,7 @@
 
 #Sigma
 
-```yaml
+```
 detection:
   selection:
     ParentImage|endswith:
@@ -24,23 +24,20 @@ detection:
       - '\\cmd.exe'
       - '\\powershell.exe'
   condition: selection
+```
 
+#MKQL
 
-'''Microsoft Sentinel (KQL)
+```
 DeviceProcessEvents
 | where InitiatingProcessFileName in~ ("WINWORD.EXE", "EXCEL.EXE")
 | where FileName in~ ("cmd.exe", "powershell.exe")
 ```
 
-#MKQL
-
-DeviceProcessEvents
-| where InitiatingProcessFileName in~ ("WINWORD.EXE", "EXCEL.EXE")
-| where FileName in~ ("cmd.exe", "powershell.exe")
-
-
 #Splunk
 
+```
 index=main sourcetype=windows_process
 ParentImage IN ("*\\winword.exe", "*\\excel.exe") 
 Image IN ("*\\cmd.exe", "*\\powershell.exe")
+```
