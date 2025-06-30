@@ -25,7 +25,7 @@ detection:
 
 ### KQL
 
-```
+```kql
 DeviceProcessEvents
 | where FileName =~ "rundll32.exe"
 | where ProcessCommandLine has_any ("javascript", "ShellExec_RunDLL")
@@ -33,7 +33,7 @@ DeviceProcessEvents
 
 ### SPL
 
-```
+```spl
 index=main sourcetype=windows_process
 Image=*rundll32.exe*
 CommandLine IN ("*javascript*", "*ShellExec_RunDLL*")
