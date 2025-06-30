@@ -25,6 +25,7 @@ detection:
   condition: selection
 ```
 
+---
 ### KQL
 
 ```kql
@@ -33,6 +34,7 @@ DeviceProcessEvents
 | where FileName in~ ("cmd.exe", "powershell.exe")
 ```
 
+---
 ### Splunk
 
 ```spl
@@ -41,6 +43,7 @@ ParentImage IN ("*\\winword.exe", "*\\excel.exe")
 Image IN ("*\\cmd.exe", "*\\powershell.exe")
 ```
 
+---
 ### MITRE ATT&CK
 
 T1059.001 – PowerShell
