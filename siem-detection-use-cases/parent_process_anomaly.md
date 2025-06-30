@@ -1,20 +1,18 @@
 # Parent Process Anomaly Detection
 
-**Description**: Detects suspicious parent-child process relationships, such as `winword.exe` spawning `cmd.exe` — common in phishing and macro-based malware.
+**Description**: Detects suspicious parent-child process relationships, such as `winword.exe` spawning `cmd.exe` — commonly used in phishing payloads or malware delivery.
 
 ---
 
-### Use Case
-- Identify LOLBins (living-off-the-land binaries) abuse
-- Catch unusual behavior chains (e.g., `excel.exe` → `powershell.exe`)
+## Use Case
+- Identify LOLBin abuse (e.g., Excel or Word launching CMD)
+- Useful for catching macro-based malware
 
 ---
 
-### Detection Logic 
+## Detection Logic (Sigma Style)
 
-# Sigma
-
-```
+```yaml
 detection:
   selection:
     ParentImage|endswith:
@@ -26,7 +24,7 @@ detection:
   condition: selection
 ```
 
-# KQL
+## KQL
 
 ```
 DeviceProcessEvents
@@ -34,7 +32,7 @@ DeviceProcessEvents
 | where FileName in~ ("cmd.exe", "powershell.exe")
 ```
 
-# Splunk
+## Splunk
 
 ```
 index=main sourcetype=windows_process
