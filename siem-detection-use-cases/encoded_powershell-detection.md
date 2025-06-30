@@ -9,8 +9,8 @@
 - Works well on command line telemetry or process logs
 
 ---
+
 ## Detection Logic
----
 
 ### Sigma
 
