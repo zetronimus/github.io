@@ -25,7 +25,7 @@ detection:
   condition: selection
 ```
 
-#MKQL
+#KQL
 
 ```
 DeviceProcessEvents
@@ -41,3 +41,7 @@ Image=*powershell*
 CommandLine IN ("*-enc*", "*-encodedcommand*")
 ```
 
+#MITRE ATT&CK
+
+T1059 – Command and Scripting Interpreter
+T1203 – Exploitation for Client Execution
