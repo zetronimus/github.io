@@ -16,9 +16,10 @@
 
 ---
 
-## Detection Logic (Sigma Style)
+### Detection Logic
 
-```yaml
+# Sigma
+
 detection:
   selection:
     CommandLine|contains:
@@ -29,6 +30,7 @@ detection:
 ```
 
 # KQL
+
 ```
 DeviceProcessEvents
 | where ProcessCommandLine has "powershell"
