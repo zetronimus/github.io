@@ -47,4 +47,3 @@ CommandLine IN ("*-enc*", "*-encodedcommand*")
 
 T1059 – Command and Scripting Interpreter
 T1203 – Exploitation for Client Execution
----
