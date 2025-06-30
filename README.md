@@ -52,7 +52,8 @@ index=windows sourcetype=WinEventLog:Security EventCode=4688
 
 These use cases detect obfuscated or encoded PowerShell usage commonly associated with malicious activity.
 
-### [Threat Intelligence Enrichment Tool](./threat-intel-enrichment/README.md)
+## IOC Enrichment Tools
+- [Threat Intelligence Enrichment Tool](tools/ioc_enrichment.md)
 A Python script to enrich IOC data using VirusTotal and Shodan APIs.
 
 **Sample Code – VirusTotal Hash Lookup**:
