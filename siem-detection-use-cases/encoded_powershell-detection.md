@@ -10,15 +10,13 @@
 
 ---
 
-## Use Case
+# Use Case
 - Detect attempts to bypass AV and EDR visibility
 - Works well on command line telemetry or process logs
 
 ---
 
-### Detection Logic
-
-# Sigma
+# Detection Logic (Sigma)
 
 detection:
   selection:
