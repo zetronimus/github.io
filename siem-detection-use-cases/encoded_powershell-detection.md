@@ -24,6 +24,7 @@ detection:
   condition: selection
 ```
 
+---
 ### KQL
 
 ```kql
@@ -32,6 +33,7 @@ DeviceProcessEvents
 | where ProcessCommandLine has_any ("-enc", "-encodedcommand")
 ```
 
+---
 ### SPL
 
 ```spl
@@ -40,6 +42,7 @@ Image=*powershell*
 CommandLine IN ("*-enc*", "*-encodedcommand*")
 ```
 
+----
 ### MITRE ATT&CK
 
 T1059 – Command and Scripting Interpreter
