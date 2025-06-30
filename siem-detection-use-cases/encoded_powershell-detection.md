@@ -14,7 +14,7 @@
 
 ### Sigma
 
-```markdown
+```yaml
 detection:
   selection:
     CommandLine|contains:
