@@ -1,23 +1,24 @@
 
 ---
 
-### Encoded PowerShell Command Detection
+### `encoded_powershell_detection.md`
 
-**Description**: Flags PowerShell commands using base64-encoded payloads, a common obfuscation tactic used by malware and red teams.
+```markdown
+# Encoded PowerShell Command Detection
 
----
-
-### Use Case
-- Detect attacks bypassing traditional signature-based AV
-- Useful for both on-host EDR and SIEM log analysis
+**Description**: Flags PowerShell commands using base64-encoded payloads, often used in obfuscated malware or red team simulations.
 
 ---
 
-### Detection Logic
+## Use Case
+- Detect attempts to bypass AV and EDR visibility
+- Works well on command line telemetry or process logs
 
-### Sigma
+---
 
-```
+## Detection Logic (Sigma Style)
+
+```yaml
 detection:
   selection:
     CommandLine|contains:
@@ -25,7 +26,7 @@ detection:
       - '-enc'
       - '-encodedcommand'
   condition: selection
-  ```
+
 
 ### KQL
 
